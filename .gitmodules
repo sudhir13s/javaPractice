@@ -2,3 +2,7 @@
 	path = leetcode-practice
 	url = git@github.com:sudhir13s/leetcode-practice.git
 	branch = main
+[submodule "java-feature-practice"]
+	path = java-feature-practice
+	url = git@github.com:sudhir13s/java-feature-practice.git
+	branch = main
