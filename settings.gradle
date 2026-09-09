@@ -1,9 +1,5 @@
 rootProject.name = 'java-practice'
 
-
 include 'furniture-factory'
 include 'java-feature-practice'
-include 'java-feature-practice:revision3'
-
 include 'leetcode-practice'
-include 'leetcode-practice:revision3'

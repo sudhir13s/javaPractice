@@ -1,4 +1,4 @@
-package dev.ss.leetcode.furniturefactory;
+package dev.ss.revision3.furniturefactory;
 
 public enum Furniture {
   CHAIR("Chair", 10.0f),

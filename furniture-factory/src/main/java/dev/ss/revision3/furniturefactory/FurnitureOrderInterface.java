@@ -1,4 +1,4 @@
-package dev.ss.leetcode.furniturefactory;
+package dev.ss.revision3.furniturefactory;
 
 import java.util.HashMap;
 
