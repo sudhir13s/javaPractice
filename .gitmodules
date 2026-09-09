@@ -1,0 +1,4 @@
+[submodule "leetcode-practice"]
+	path = leetcode-practice
+	url = git@github.com:sudhir13s/leetcode-practice.git
+	branch = main

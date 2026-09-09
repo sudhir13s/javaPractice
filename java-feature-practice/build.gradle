@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'dev.ss.educative'
+group 'dev.ss.javapractice'
 version '0.0.1-SNAPSHOT'
 
 repositories {
@@ -10,12 +10,11 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation platform('org.junit:junit-bom:6.0.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
-//test {
-//    useJUnitPlatform()
-//}
-//
-//tasks.register("prepareKotlinBuildScriptModel"){}
+test {
+    useJUnitPlatform()
+}
