@@ -1,7 +1,6 @@
 package dev.ss.leetcode.furniturefactory;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Main {
@@ -13,9 +12,8 @@ public class Main {
     furnitureOrder.addToOrder(Furniture.TABLE, 4);
     furnitureOrder.addToOrder(Furniture.COUCH, 1);
 
-
     HashMap<Furniture, Integer> orders = furnitureOrder.getOrderedFurniture();
-    for (Map.Entry<Furniture, Integer> order: orders.entrySet()) {
+    for (Map.Entry<Furniture, Integer> order : orders.entrySet()) {
       System.out.println(order.getKey() + " | " + order.getValue());
     }
     System.out.println();

@@ -11,6 +11,7 @@ public class FurnitureOrder implements FurnitureOrderInterface {
     super();
     this.order = new HashMap<>(1);
   }
+
   @Override
   public void addToOrder(Furniture type, int count) {
     this.order.put(type, this.order.getOrDefault(type, 0) + count);
@@ -23,8 +24,7 @@ public class FurnitureOrder implements FurnitureOrderInterface {
 
   @Override
   public int getTypeCount(Furniture type) {
-    return this.order.entrySet()
-        .stream()
+    return this.order.entrySet().stream()
         .filter(tp -> tp.getKey() == type)
         .mapToInt(Map.Entry::getValue)
         .sum();
@@ -37,17 +37,14 @@ public class FurnitureOrder implements FurnitureOrderInterface {
 
   @Override
   public float getTotalOrderCost() {
-    return (float) this.order.entrySet()
-        .stream()
-        .mapToDouble(entry -> (double) (entry.getKey().cost() * entry.getValue()))
-        .sum();
+    return (float)
+        this.order.entrySet().stream()
+            .mapToDouble(entry -> (double) (entry.getKey().cost() * entry.getValue()))
+            .sum();
   }
 
   @Override
   public int getTotalOrderQuantity() {
-    return this.order.values()
-        .stream()
-        .mapToInt(i -> i)
-        .sum();
+    return this.order.values().stream().mapToInt(i -> i).sum();
   }
 }
